@@ -1,0 +1,14 @@
+[
+  { "code": "US", "label": "United States", "phone": "1" },
+  { "code": "CA", "label": "Canada", "phone": "1" },
+  { "code": "MX", "label": "Mexico", "phone": "52" },
+  { "code": "AR", "label": "Argentina", "phone": "54" },
+  { "code": "BR", "label": "Brazil", "phone": "55" },
+  { "code": "CL", "label": "Chile", "phone": "56" },
+  { "code": "DE", "label": "Germany", "phone": "49" },
+  { "code": "FR", "label": "France", "phone": "33" },
+  { "code": "GB", "label": "United Kingdom", "phone": "44" },
+  { "code": "IT", "label": "Italy", "phone": "39" },
+  { "code": "ES", "label": "Spain", "phone": "34" },
+  { "code": "JP", "label": "Japan", "phone": "81" }
+]
