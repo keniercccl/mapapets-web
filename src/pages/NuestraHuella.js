@@ -19,7 +19,12 @@ const NuestraHuella = () => {
   };
 
   return (
-    <Box marginTop={6}>
+    <Box sx={{
+      padding: { xs: 6, md: 10 },
+      margin: { xs: 1, md: 10 },
+      backgroundColor: "rgba(255, 255, 255, 0.8)",
+      borderRadius: 3,
+    }}>
       <Box sx={{ margin: "10px" }}>
         <Grid container spacing={2}>
           {huellasPorElMundo

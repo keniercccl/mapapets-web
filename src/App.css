@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Batangas&display=swap');
+
 .App {
   min-height: 100vh;
   display: flex;
@@ -43,7 +46,7 @@
   }
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Batangas&display=swap');
 
 .batangas-font {
@@ -87,4 +90,14 @@
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 20%;
+}
+
+.bree-serif-regular {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.slackey-regular {
+  font-family: 'Slackey', cursive;
 }

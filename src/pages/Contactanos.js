@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import emailjs from '@emailjs/browser';
 import CountrySelector from "../components/CountrySelector";
+import '../App.css'
 
 const Contactanos = () => {
   const [form, setForm] = useState({
@@ -27,7 +28,6 @@ const Contactanos = () => {
     if (isFormValid()) {
       console.log("Formulario enviado:", form);
 
-      
       emailjs.send("service_token","template_ndku4po",{
         name: form.nombre,
         message: form.mensaje,
@@ -70,16 +70,17 @@ const Contactanos = () => {
   return (
     <Box
       sx={{
-        padding: { xs: 6, md: 20 },
-        margin: { xs: 1, md: 20 },
+        padding: { xs: 6, md: 10 },
+        margin: { xs: 1, md: 10 },
         backgroundColor: "rgba(255, 255, 255, 0.8)",
         borderRadius: 3,
       }}
     >
-      <Typography
-        variant="h3"
+      <h2 className="slackey-regular" color='green' > Contáctanos</h2>
+      <Typography className="slackey-regular"
+        variant="h2"
         gutterBottom
-        sx={{ fontFamily: "cursive", padding: "10px", color: "purple" }}
+        sx={{ fontFamily: "cursive", padding: "10px", color: "purple", fontSize: '32px' }}
       >
         Contáctanos
       </Typography>

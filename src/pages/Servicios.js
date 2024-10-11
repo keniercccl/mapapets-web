@@ -8,23 +8,27 @@ const Servicios = () => {
   return (
     <Box
       sx={{
-        margin: { xs: "0", sm: "0", md: "20px", lg: "40px" }, // Margen amplio en desktop, 0 en mobile
-        padding: 3,
-        margin: 3,
+        padding: { xs: 6, md: 10 },
+        margin: { xs: 1, md: 10 },
         backgroundColor: "rgba(255, 255, 255, 0.8)",
         borderRadius: 3,
       }}
+    >
+      <Typography
+        variant="h2"
+        gutterBottom
+        padding={3}
+        sx={{ padding: "10px", color: "purple" }}
       >
-      <Typography variant="h2" gutterBottom padding={3} sx={{ fontFamily: "cursive", padding: "10px", color: "purple" }}>
         Servicios
       </Typography>
       <Grid
         container
         spacing={4}
         sx={{
-          padding: { xs: "10px", md: "20px" }, // Padding entre elementos
+          padding: { xs: "10px", md: "20px" }, 
         }}
-        >
+      >
         {/* Primer Servicio */}
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <img
@@ -33,7 +37,7 @@ const Servicios = () => {
             style={{
               width: "60%",
               height: "auto",
-              objectFit: "cover", // Redimensiona manteniendo la calidad
+              objectFit: "cover",
             }}
           />
           <Typography
@@ -57,7 +61,7 @@ const Servicios = () => {
             style={{
               width: "60%",
               height: "auto",
-              objectFit: "cover", // Redimensiona manteniendo la calidad
+              objectFit: "cover", 
             }}
           />
           <Typography

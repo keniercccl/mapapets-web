@@ -9,7 +9,10 @@ import Contactanos from "./pages/Contactanos";
 import Navbar from "./components/Navbar";
 import Fondos from "./components/Fondos";
 import SplashScreen from "./components/SplashScreen";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
+import WhatsappButton from "./components/WhatsappButton";
+import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
+import theme from "./theme/themes";
 
 const router = createBrowserRouter([
   {
@@ -74,9 +77,12 @@ function App() {
       {showSplash && <SplashScreen onClose={handleCloseSplash} />}
       {!showSplash && (
         <>
-          <Navbar />
-          <RouterProvider router={router} />
-          <Footer />
+          <ThemeProvider theme={theme}>
+            <Navbar />
+            <RouterProvider router={router} />
+            <Footer />
+            <WhatsappButton />
+          </ThemeProvider>
         </>
       )}
     </div>
