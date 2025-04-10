@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Grid, Box } from "@mui/material";
+import React, { useState } from "react";
+import { Grid, Box, Typography, Divider, useTheme, useMediaQuery } from "@mui/material";
 import CardNuestraHuella from "../components/CardNuestraHuella";
 import ModalNuestraHuella from "../components/ModalNuestraHuella";
 import huellasPorElMundo from "../data/huellasPorElMundo.json";
+import CarruselHuellas from "../components/CarruselHuellas";
 
 const NuestraHuella = () => {
   const [selectedHuella, setSelectedHuella] = useState(null);
   const [open, setOpen] = useState(false);
+  
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   const handleOpen = (huella) => {
     setSelectedHuella(huella);
@@ -21,11 +25,20 @@ const NuestraHuella = () => {
   return (
     <Box sx={{
       padding: { xs: 6, md: 10 },
-      margin: { xs: 1, md: 10 },
-      backgroundColor: "rgba(255, 255, 255, 0.8)",
+      margin: { xs: 2, md: 10 },
+      backgroundColor: "rgba(255, 255, 255)",
       borderRadius: 3,
+      boxShadow: 24,
     }}>
-      <Box sx={{ margin: "10px" }}>
+      <Typography variant="h2"
+        gutterBottom
+        padding={3}
+        sx={{ padding: "10px", color: "purple", fontWeight: "bold" }}>
+        Nuestra Huella
+      </Typography>
+
+
+      {/* <Box sx={{ margin: "10px" }}>
         <Grid container spacing={2}>
           {huellasPorElMundo
             .filter((huella) => huella.estado === "activo")
@@ -49,6 +62,24 @@ const NuestraHuella = () => {
             resena={selectedHuella.resena}
           />
         )}
+      </Box> */}
+
+
+
+
+      <Divider />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: isDesktop ? "100%" : "100%",
+          height: isDesktop ? "100%" : "100%",
+          margin: "2px",
+          marginTop: 1,
+        }}
+      >
+        <CarruselHuellas />
       </Box>
     </Box>
   );

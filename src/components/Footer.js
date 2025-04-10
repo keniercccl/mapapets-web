@@ -4,7 +4,6 @@ import {
   Grid,
   Typography,
   Divider,
-  SvgIcon,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -14,58 +13,52 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CopyrightIcon from "@mui/icons-material/Copyright";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import GoogleMap from "../components/GoogleMap"; 
-import logoMapapets from "../assets/logo_dos.png";
+import GoogleMap from "../components/GoogleMap";
+import logoMapapets from "../assets/mapapets_isotipo.png";
 
 const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box sx={{ backgroundColor: "rgba(225, 114, 133,0.8)", mt: 4 }}>
-      {/* Condicional para saber si es Desktop o Mobile */}
+    <Box sx={{ backgroundColor: "orange", mt: 4 }}> {/* Contenedor principal con fondo naranja y margen superior */}
       <Grid
         container
         sx={{
           backgroundColor: isMobile
             ? "rgba(255, 255, 255, 0.9)"
-            : "rgba(255, 255, 255, 0.5)",
+            : "rgba(255, 255, 255, 0.9)", // Fondo blanco con diferente opacidad según el tamaño de la pantalla
           padding: "16px",
+    
         }}
       >
-        {/* Primera columna: Google Maps en Desktop / Se oculta en Mobile */}
-        {!isMobile && (
-          <Grid item xs={12} md={5} sx={{ margin: 2 }}>
+        {!isMobile && ( // Si no es un dispositivo móvil, muestra el mapa
+          <Grid item xs={12} md={6} sx={{ margin: "auto" }}> {/* Sección del mapa */}
             <GoogleMap
               sx={{
-                width: "100%", // Abarca todo el ancho del GRid
-                height: "100%", // Abarca todo el alto del grid
+                width: "100%",
+                height: "100%",
               }}
             />
           </Grid>
         )}
 
-        {/* Segunda columna: Logo y contacto */}
-        <Grid item xs={12} md={4}>
-          {/* Logo en la parte superior */}
-          <Box display="flex" justifyContent="center">
+        <Grid item xs={12} md={6}> {/* Sección de contacto */}
+          <Box display="flex" justifyContent="center" alignItems="center" margin="auto"> {/* Contenedor del logo */}
             <img
               src={logoMapapets}
               alt="Logo Mapapets"
               style={{ width: "80px", cursor: "pointer" }}
-              onClick={() => (window.location.href = "/inicio")}
+              onClick={() => (window.location.href = "/inicio")} // Redirecciona a la página de inicio al hacer clic
             />
           </Box>
-
-          {/* Información de contacto */}
-          <Box
+          <Box alignItems="center"
             mt={isMobile ? 2 : 4}
-            sx={{ textAlign: isMobile ? "left" : "center" }}
+            sx={{ textAlign: isMobile ? "center" : "center" }}
           >
-            <Typography variant="h6">Contactanos</Typography>
-            <Divider sx={{ my: 2 }} />
-            <Box display="flex" alignItems="center" mb={1}>
+            <Typography variant="h6">Contactanos</Typography> {/* Título de la sección */}
+            <Divider sx={{ my: 2 }} /> {/* Línea divisoria */}
+            <Box display="flex" alignItems="center" mb={1}> {/* Sección del teléfono */}
               <CallIcon sx={{ mr: 1 }} />
               <Typography>+57 (1) 320 344 6611</Typography>
             </Box>
@@ -73,7 +66,7 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               mb={1}
-              onClick={() => window.open("https://wa.me/573213251713")}
+              onClick={() => window.open("https://wa.me/573213251713")} // Abre WhatsApp al hacer clic
             >
               <WhatsAppIcon sx={{ mr: 1 }} />
               <Typography>+57 (1) 321 325 1713</Typography>
@@ -82,7 +75,7 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               mb={1}
-              onClick={() => (window.location.href = "/contactanos")}
+              onClick={() => (window.location.href = "/contactanos")} // Redirecciona a la página de contacto
             >
               <EmailIcon sx={{ mr: 1 }} />
               <Typography>mapapets@hotmail.com</Typography>
@@ -92,7 +85,7 @@ const Footer = () => {
               alignItems="center"
               mb={1}
               onClick={() =>
-                window.open("https://maps.app.goo.gl/UdMnuv7GACM7qLES7")
+                window.open("https://maps.app.goo.gl/UdMnuv7GACM7qLES7") // Abre Google Maps con la ubicación
               }
             >
               <LocationOnIcon sx={{ mr: 1 }} />
@@ -101,7 +94,7 @@ const Footer = () => {
             <Box
               display="flex"
               alignItems="center"
-              onClick={() => window.open("instagram://user?username=mapa_pets")}
+              onClick={() => window.open("instagram://user?username=mapa_pets")} // Abre el perfil de Instagram
             >
               <InstagramIcon sx={{ mr: 1 }} />
               <Typography>@mapa_pets</Typography>
@@ -110,19 +103,17 @@ const Footer = () => {
         </Grid>
       </Grid>
 
-      {/* Footer final con Copyright */}
       <Box
         display="flex"
         justifyContent="center"
         alignItems="center"
-        sx={{ height: "24px", backgroundColor: "#E17285" }}
+        sx={{ height: "24px", backgroundColor: "#75b7a9" }} // Sección de copyright
       >
         <CopyrightIcon sx={{ mr: 1 }} />
-        {/* Aqui falta modificar los derechos reservados */}
-        <Typography>Muchas gracias Opita</Typography>
+        <Typography>2025 Mapapets</Typography>
       </Box>
     </Box>
   );
 };
 
-export default Footer;
+export default Footer; // Exporta el componente Footer

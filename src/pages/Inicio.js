@@ -8,23 +8,22 @@ const Inicio = () => {
   return (
     <Box
       sx={{
-        padding: { xs: 6, md: 10 },
-        margin: { xs: 1, md: 10 },
-        backgroundColor: "rgba(255, 255, 255, 0.8)",
+        padding: { xs: 1, md: 10 },
+        margin: { xs: 2, md: 10 },
+        backgroundColor: "rgba(255, 255, 255)",
+        backgroundImage: "../assets/fondo_blanco.png",
         borderRadius: 3,
+        boxShadow: 24,
       }}
     >
       <Grid>
-        <Box padding="40px">
+        <Box padding="20px">
           <InformacionPrincipal />
-          <p className="slackey-regular">INICIO / inicio</p>
         </Box>
-
         <Box>
           <Divider />
         </Box>
         <Box>
-
           <Staff />
         </Box>
       </Grid>

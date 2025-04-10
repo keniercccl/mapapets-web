@@ -1,8 +1,4 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import SpeedDial from "@mui/material/SpeedDial";
-import SpeedDialIcon from "@mui/material/SpeedDialIcon";
-import SpeedDialAction from "@mui/material/SpeedDialAction";
 import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import PrintIcon from "@mui/icons-material/Print";
@@ -25,15 +21,15 @@ const WhatsappButton = () => {
         position: "fixed",
         bottom: 16,
         right: 16,
-        width: 56,
-        height: 56,
+        width: 72,
+        height: 72,
         borderRadius: "50%",
         backgroundImage: `url(${WhatsAppPng})`,
         backgroundSize: "cover",
         zIndex: 1000,
         "&:hover": {
-          width: 70,
-          height: 70,
+          width: 76,
+          height: 76,
           borderRadius: "50%",
           backgroundSize: "cover"
         },

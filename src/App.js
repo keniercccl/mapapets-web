@@ -7,7 +7,6 @@ import NuestraHuella from "./pages/NuestraHuella";
 import Servicios from "./pages/Servicios";
 import Contactanos from "./pages/Contactanos";
 import Navbar from "./components/Navbar";
-import Fondos from "./components/Fondos";
 import SplashScreen from "./components/SplashScreen";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";

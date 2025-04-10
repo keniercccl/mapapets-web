@@ -6,10 +6,10 @@ import logoMapapets from '../assets/logo_uno.png'
 const SplashScreen = ({ onClose }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      onClose(); // Oculta la splash screen después de un tiempo
+      onClose();
     }, 1000);
 
-    return () => clearTimeout(timer); // Limpia el temporizador si el componente se desmonta
+    return () => clearTimeout(timer); 
   }, [onClose]);
 
   return (
